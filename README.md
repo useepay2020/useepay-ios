@@ -36,7 +36,7 @@
 
 1. 在 Podfile 中添加：
 ```ruby
-pod 'UseePayCore', '~> 1.0.0'
+pod 'UseePay', '~> 1.0.0'
 ```
 2.执行安装：
 ```ruby
