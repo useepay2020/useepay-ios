@@ -42,7 +42,7 @@
 
 1. 在 Podfile 中添加：
 ```ruby
-pod 'UseePayCore', '~> 1.0.0'
+pod 'UseePay', '~> 0.0.2'
 ```
 2. 执行安装：
 ```bash
@@ -82,7 +82,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 private func configureUseePaySDK() {
     // 从安全存储读取配置信息
-    let env: Environment = .production  // 或 .sandbox 沙盒环境
+    let env: UseePayCore.UPNetworkingEnv = .production  // 或 .sandbox 沙盒环境
     let merchantNo = "您的商户号"
     
     do {

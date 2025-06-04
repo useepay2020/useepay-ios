@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7A540C072DF0164000FC7DED /* UseePayCore in Frameworks */ = {isa = PBXBuildFile; productRef = 7A540C062DF0164000FC7DED /* UseePayCore */; };
+		7A5618BC2DAA1C9600A31608 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5618BB2DAA1C9600A31608 /* AppDelegate.swift */; };
+		7A5618BE2DAA1C9600A31608 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5618BD2DAA1C9600A31608 /* SceneDelegate.swift */; };
+		7A5618C02DAA1C9600A31608 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5618BF2DAA1C9600A31608 /* MainViewController.swift */; };
+		7A5618C32DAA1C9600A31608 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A5618C12DAA1C9600A31608 /* Main.storyboard */; };
+		7A5618C52DAA1C9700A31608 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5618C42DAA1C9700A31608 /* Assets.xcassets */; };
+		7A5618C82DAA1C9700A31608 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A5618C62DAA1C9700A31608 /* LaunchScreen.storyboard */; };
+		7A9803182DE34A7A00B46389 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9803172DE34A7A00B46389 /* BaseViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7A5618EE2DAA1D4E00A31608 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7A5618B82DAA1C9600A31608 /* UseePayDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UseePayDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A5618BB2DAA1C9600A31608 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7A5618BD2DAA1C9600A31608 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7A5618BF2DAA1C9600A31608 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		7A5618C22DAA1C9600A31608 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7A5618C42DAA1C9700A31608 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A5618C72DAA1C9700A31608 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7A5618C92DAA1C9700A31608 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A91D39C2DCCD8D800CA675E /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Main.strings"; sourceTree = "<group>"; };
+		7A91D39D2DCCD8D800CA675E /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		7A91D39F2DCCD8E700CA675E /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Main.strings"; sourceTree = "<group>"; };
+		7A91D3A02DCCD8E700CA675E /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		7A91D3A22DCCD8F000CA675E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		7A91D3A32DCCD8F000CA675E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		7A91D3A52DCCD8FA00CA675E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		7A91D3A62DCCD8FA00CA675E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		7A91D3A82DCCD90300CA675E /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
+		7A91D3A92DCCD90300CA675E /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		7A91D3AB2DCCD91400CA675E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		7A91D3AC2DCCD91400CA675E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		7A91D3AE2DCCD92400CA675E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		7A91D3AF2DCCD92400CA675E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		7A9803172DE34A7A00B46389 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = UseepayDemo/BaseViewController.swift; sourceTree = SOURCE_ROOT; };
+		7ACFF3992DAA40E100109539 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7ACFF39B2DAA40E800109539 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/System/iOSSupport/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		7ACFF39D2DAA40F300109539 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/System/iOSSupport/System/Library/PrivateFrameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A5618B52DAA1C9600A31608 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A540C072DF0164000FC7DED /* UseePayCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7A5618AF2DAA1C9600A31608 = {
+			isa = PBXGroup;
+			children = (
+				7A5618BA2DAA1C9600A31608 /* UseePayDemo */,
+				7A5618B92DAA1C9600A31608 /* Products */,
+				7ACFF3982DAA40E100109539 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7A5618B92DAA1C9600A31608 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A5618B82DAA1C9600A31608 /* UseePayDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A5618BA2DAA1C9600A31608 /* UseePayDemo */ = {
+			isa = PBXGroup;
+			children = (
+				7A5618BB2DAA1C9600A31608 /* AppDelegate.swift */,
+				7A5618BD2DAA1C9600A31608 /* SceneDelegate.swift */,
+				7A9803172DE34A7A00B46389 /* BaseViewController.swift */,
+				7A5618BF2DAA1C9600A31608 /* MainViewController.swift */,
+				7A5618C12DAA1C9600A31608 /* Main.storyboard */,
+				7A5618C42DAA1C9700A31608 /* Assets.xcassets */,
+				7A5618C62DAA1C9700A31608 /* LaunchScreen.storyboard */,
+				7A5618C92DAA1C9700A31608 /* Info.plist */,
+			);
+			path = UseePayDemo;
+			sourceTree = "<group>";
+		};
+		7ACFF3982DAA40E100109539 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7ACFF39D2DAA40F300109539 /* WebKit.framework */,
+				7ACFF39B2DAA40E800109539 /* UIKit.framework */,
+				7ACFF3992DAA40E100109539 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7A5618B72DAA1C9600A31608 /* UseePayDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A5618CC2DAA1C9700A31608 /* Build configuration list for PBXNativeTarget "UseePayDemo" */;
+			buildPhases = (
+				7A5618B42DAA1C9600A31608 /* Sources */,
+				7A5618B52DAA1C9600A31608 /* Frameworks */,
+				7A5618B62DAA1C9600A31608 /* Resources */,
+				7A5618EE2DAA1D4E00A31608 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UseePayDemo;
+			productName = UseePayDemo;
+			productReference = 7A5618B82DAA1C9600A31608 /* UseePayDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A5618B02DAA1C9600A31608 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					7A5618B72DAA1C9600A31608 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 7A5618B32DAA1C9600A31608 /* Build configuration list for PBXProject "UseepayDemo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"en-GB",
+				"fr-CA",
+				fr,
+				de,
+				it,
+				ja,
+				ru,
+			);
+			mainGroup = 7A5618AF2DAA1C9600A31608;
+			packageReferences = (
+				7A540C052DF0164000FC7DED /* XCRemoteSwiftPackageReference "useepay-ios" */,
+			);
+			productRefGroup = 7A5618B92DAA1C9600A31608 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A5618B72DAA1C9600A31608 /* UseePayDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A5618B62DAA1C9600A31608 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A5618C82DAA1C9700A31608 /* LaunchScreen.storyboard in Resources */,
+				7A5618C52DAA1C9700A31608 /* Assets.xcassets in Resources */,
+				7A5618C32DAA1C9600A31608 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A5618B42DAA1C9600A31608 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A5618C02DAA1C9600A31608 /* MainViewController.swift in Sources */,
+				7A9803182DE34A7A00B46389 /* BaseViewController.swift in Sources */,
+				7A5618BC2DAA1C9600A31608 /* AppDelegate.swift in Sources */,
+				7A5618BE2DAA1C9600A31608 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7A5618C12DAA1C9600A31608 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A5618C22DAA1C9600A31608 /* Base */,
+				7A91D39C2DCCD8D800CA675E /* en-GB */,
+				7A91D39F2DCCD8E700CA675E /* fr-CA */,
+				7A91D3A22DCCD8F000CA675E /* fr */,
+				7A91D3A52DCCD8FA00CA675E /* de */,
+				7A91D3A82DCCD90300CA675E /* it */,
+				7A91D3AB2DCCD91400CA675E /* ja */,
+				7A91D3AE2DCCD92400CA675E /* ru */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7A5618C62DAA1C9700A31608 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A5618C72DAA1C9700A31608 /* Base */,
+				7A91D39D2DCCD8D800CA675E /* en-GB */,
+				7A91D3A02DCCD8E700CA675E /* fr-CA */,
+				7A91D3A32DCCD8F000CA675E /* fr */,
+				7A91D3A62DCCD8FA00CA675E /* de */,
+				7A91D3A92DCCD90300CA675E /* it */,
+				7A91D3AC2DCCD91400CA675E /* ja */,
+				7A91D3AF2DCCD92400CA675E /* ru */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7A5618CA2DAA1C9700A31608 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7A5618CB2DAA1C9700A31608 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7A5618CD2DAA1C9700A31608 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MJHSHUTVA2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UseePayDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = UseePayExample;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.7;
+				PRODUCT_BUNDLE_IDENTIFIER = com.useepay.example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7A5618CE2DAA1C9700A31608 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MJHSHUTVA2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UseePayDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = UseePayExample;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.7;
+				PRODUCT_BUNDLE_IDENTIFIER = com.useepay.example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A5618B32DAA1C9600A31608 /* Build configuration list for PBXProject "UseepayDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A5618CA2DAA1C9700A31608 /* Debug */,
+				7A5618CB2DAA1C9700A31608 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A5618CC2DAA1C9700A31608 /* Build configuration list for PBXNativeTarget "UseePayDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A5618CD2DAA1C9700A31608 /* Debug */,
+				7A5618CE2DAA1C9700A31608 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7A540C052DF0164000FC7DED /* XCRemoteSwiftPackageReference "useepay-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/useepay2020/useepay-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7A540C062DF0164000FC7DED /* UseePayCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A540C052DF0164000FC7DED /* XCRemoteSwiftPackageReference "useepay-ios" */;
+			productName = UseePayCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 7A5618B02DAA1C9600A31608 /* Project object */;
+}

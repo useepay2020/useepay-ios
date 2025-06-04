@@ -42,7 +42,7 @@ Ensure you have registered and applied for the relevant App payment features in 
 
 1. Add to Podfile:
 ```ruby
-pod 'UseePayCore', '~> 1.0.0'
+pod 'UseePay', '~> 0.0.2'
 ```
 2. Execute installation:
 ```bash
@@ -82,7 +82,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 private func configureUseePaySDK() {
     // Read configuration from secure storage
-    let env: Environment = .production  // or .sandbox for sandbox environment
+    let env: UseePayCore.UPNetworkingEnv = .production  // or .sandbox for sandbox environment
     let merchantNo = "Your merchant number"
     
     do {

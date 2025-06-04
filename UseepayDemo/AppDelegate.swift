@@ -2,10 +2,11 @@
 //  AppDelegate.swift
 //  UseePayDemo
 //
-//  Created by Mingwei Shi on 2025/5/17.
+//  Created by Mingwei Shi on 2025/4/12.
 //
 
 import UIKit
+import UseePayCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,7 +15,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        configureUseePaySDK()
         return true
+    }
+    
+    private func configureUseePaySDK() {
+        // Read configuration from secure storage
+        let env: UseePayCore.UPNetworkingEnv = .production  // or .sandbox for sandbox environment
+        let merchantNo = "Your merchant number"
+        
+        do {
+            try UseePay.setup(
+                env: env,
+                merchantNo: merchantNo
+            )
+        } catch {
+            print("UseePay initialization failed: \(error.localizedDescription)")
+        }
     }
 
     // MARK: UISceneSession Lifecycle

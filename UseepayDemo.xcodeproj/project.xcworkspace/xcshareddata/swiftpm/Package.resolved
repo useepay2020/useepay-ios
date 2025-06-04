@@ -1,0 +1,15 @@
+{
+  "originHash" : "d6224c9ed4100618c682813a710e9f1a730e20b2477219fe4e26b7a1ac5a516e",
+  "pins" : [
+    {
+      "identity" : "useepay-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/useepay2020/useepay-ios",
+      "state" : {
+        "revision" : "24781ce238009cc875b6f0519a8d11444b38c19d",
+        "version" : "0.0.2"
+      }
+    }
+  ],
+  "version" : 3
+}
