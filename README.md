@@ -1,66 +1,78 @@
-# UseePay SDK 集成与使用指南
+# UseePay Payment SDK Integration and Usage Guide
+## English | [中文](README_ZH_CN.md)
+## Table of Contents
+- [Prerequisites](#prerequisites)
+- [Supported Versions](#supported-versions)
+- [Integration Methods](#integration-methods)
+  - [Swift Package Manager (SPM) Integration](#swift-package-manager-spm-integration)
+  - [CocoaPods Integration](#cocoapods-integration)
+  - [Manual Framework Integration](#manual-framework-integration)
+- [SDK Usage Guide](#sdk-usage-guide)
+  - [Initialization Configuration](#initialization-configuration)
+  - [Payment Function Implementation](#payment-function-implementation)
+  - [Payment Result Handling](#payment-result-handling)
 
-## 目录
-- [支持版本](#支持版本)
-- [集成方式](#集成方式)
-  - [Swift Package Manager (SPM) 集成](#swift-package-manager-spm-集成)
-  - [CocoaPods 集成](#cocoapods-集成方式)
-  - [手动集成 Framework](#手动集成-framework)
-- [SDK 使用指南](#sdk-使用指南)
-  - [初始化配置](#初始化配置)
-  - [支付功能实现](#支付功能实现)
-  - [支付结果处理](#支付结果处理)
+## Prerequisites
+Ensure you have registered and applied for the relevant App payment features in the UseePay merchant backend. Below are the UseePay merchant backend addresses:
+- [Sandbox](https://mc1.uat.useepay.com/#/login)
+- [Production](https://mc.useepay.com/#/login)
 
-## 支持版本
-- 最低支持 iOS 13.0 及以上版本
+## Supported Versions
+- Minimum support for iOS 13.0 and above
 
-## 集成方式
+## Integration Methods
 
-### Swift Package Manager (SPM) 集成
+### Swift Package Manager (SPM) Integration
 
-1. **在 Xcode 中添加包依赖**
-   - 打开项目，选择 `File` > `Add Packages...`
-   - 输入 UseePay 的包仓库 URL(https://github.com/useepay2020/useepay-ios)
-   - 选择版本规则（推荐使用最新稳定版本）
-   - 点击 `Add Package`
+1. **Add Package Dependency in Xcode**
+   - Open your project, select `File` > `Add Packages...`
+   - Enter the UseePay package repository URL: `https://github.com/useepay2020/useepay-ios`
+   - Select the version rule (recommended to use the latest stable version)
+   - Click `Add Package`
 
-2. **添加框架到目标**
-   - 在添加包后，选择需要集成 UseePay 的目标
-   - 确保 `UseePayCore` 被正确链接
+2. **Add Framework to Target**
+   - After adding the package, select the target that needs to integrate UseePay
+   - Ensure `UseePayCore` is correctly linked
 
-3. **配置 Swift 环境**
-   - 如果是纯 Objective-C 项目，需要创建一个空的 Swift 文件以启用 Swift 支持
-   - Xcode 会提示创建桥接文件，选择创建
+3. **Configure Swift Environment**
+   - For pure Objective-C projects, create an empty Swift file to enable Swift support
+   - Xcode will prompt to create a bridging header; select "Create"
 
-### CocoaPods 集成方式
+### CocoaPods Integration
 
-1. 在 Podfile 中添加：
+1. Add to Podfile:
 ```ruby
-pod 'UseePay', '~> 1.0.0'
+pod 'UseePayCore', '~> 1.0.0'
 ```
-2.执行安装：
-```ruby
+2. Execute installation:
+```bash
 pod install
 ```
-3.打开 .xcworkspace 文件进行开发
+3. Open the generated `.xcworkspace` file for development
 
-### 手动集成 Framework
-1. **下载 Framework**
-    - 从 Releases 中下载最新的 UseePayCore.xcframework
-2. **添加 Framework 到项目**
-    - 在项目目录中创建 Frameworks 文件夹
-    - 将 UseePayCore.xcframework 拷贝到此文件夹
-    - 在 Xcode 中，右键项目 > Add Files to "YourProject"...
-    - 选择添加 UseePayCore.xcframework
-3. **设置 Embed & Sign**
-    - 在项目设置的 General 标签
-    - 找到 Frameworks, Libraries, and Embedded Content
-    - 确保 UseePayCore.xcframework 设置为 Embed & Sign
+### Manual Framework Integration
 
-### SDK 使用指南
-**初始化配置**
+1. **Download Framework**
+   - Download the latest `UseePayCore.xcframework` from Releases
+
+2. **Add Framework to Project**
+   - Create a Frameworks folder in the project directory
+   - Copy `UseePayCore.xcframework` to this folder
+   - In Xcode, right-click the project > Add Files to "YourProject"...
+   - Select and add `UseePayCore.xcframework`
+
+3. **Set Embed & Sign**
+   - In the project settings under the General tab
+   - Find Frameworks, Libraries, and Embedded Content
+   - Ensure `UseePayCore.xcframework` is set to Embed & Sign
+
+## SDK Usage Guide
+
+### Initialization Configuration
+
+It is recommended to initialize in `AppDelegate`:
+
 ```swift
-// 建议在 AppDelegate 中初始化
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
     configureUseePaySDK()
@@ -69,68 +81,72 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 
 private func configureUseePaySDK() {
-    // 从安全存储读取配置信息
-    let env: Environment = .production
-    let merchantNo = ""
-    let apiKey = ""
-    let appId = ""
+    // Read configuration from secure storage
+    let env: Environment = .production  // or .sandbox for sandbox environment
+    let merchantNo = "Your merchant number"
     
     do {
         try UseePay.setup(
             env: env,
-            merchantNo: merchantNo,
-            apiKey: apiKey,
-            appId: appId
+            merchantNo: merchantNo
         )
     } catch {
-        print("初始化失败: \(error.localizedDescription)")
+        print("UseePay initialization failed: \(error.localizedDescription)")
     }
 }
 ```
-**支付功能实现**
+
+### Payment Function Implementation
+
 ```swift
 func showPaymentSheet() {
-    // 创建高级配置
+    // Create payment configuration
     let configuration = UPPaymentSheetConfiguration.make {
-        // 主题模式
-        ThemeModeComponent(mode: .dark)  // .light, .dark, .followSystem
-        
-        // 自定义主题色
-        CustomThemeColorComponent(color: UIColor.systemBlue)
+        ThemeModeComponent(mode: .followSystem)  // Theme mode
+        SheetStyleComponent(inputCornerRadius: 5, payBtnCornerRadius: 8, doneBtnCornerRadius: 8)
+        PayBtnStyleComponent(
+            lightPayBtnBgColor: "#FFFFFF",      // Light mode button background color
+            lightPayBtnTextColor: "#000000",    // Light mode button text color
+            darkPayBtnBgColor: "#000000",       // Dark mode button background color
+            darkPayBtnTextColor: "#FFFFFF"      // Dark mode button text color
+        )
+        PaymentResultComponent(showPaymentResult: true)  // Whether to show payment result page
     }
     
-    // 发起支付
+    // Initiate payment
     do {
         try UseePay.showPaymentSheet(
-            on: self,
-            withDelegate: self,
-            withConfiguration: configuration,
-            withPid: "ORDER_ID",
-            withClientSecret: "SECRET",
-            withAmount: 99.99,
-            withCurrency: "USD"
+            on: self,                           // ViewController to display
+            withDelegate: self,                 // Payment result delegate
+            withConfiguration: configuration,   // Payment configuration
+            withPid: "Order ID",               // Payment ID obtained from the server
+            withClientSecret: "Client secret"   // Client secret obtained from the server
         )
     } catch let error as UseePayError {
         handlePaymentError(error)
     } catch {
-        print("未知错误: \(error.localizedDescription)")
+        print("Unknown error: \(error.localizedDescription)")
     }
 }
 ```
-**支付结果处理**
+
+### Payment Result Handling
+
 ```swift
-extension PaymentViewController: UseePayDelegate {
+extension YourViewController: UseePayDelegate {
     
     func useePay(didCompletePaymentWithResult result: UPPaymentResult, message: String?) {
         switch result {
         case .succeeded:
-            print("支付成功")
-            // 更新订单状态等操作
+            print("Payment successful")
+            // Note: This only indicates the client-side payment process is complete; the final result should be confirmed by querying the server
+            // It is recommended to query the final order status from your server here
             
         case .failed:
             if let msg = message {
-                print("支付失败: \(msg)")
+                print("Payment failed: \(msg)")
             }
+            // Handle payment failure logic
             
         @unknown default:
             break
@@ -138,7 +154,14 @@ extension PaymentViewController: UseePayDelegate {
     }
     
     func useePayDidCancel() {
-        print("用户取消支付")
+        print("User canceled payment")
+        // Handle user cancellation logic
     }
 }
 ```
+
+## Notes
+1. The `PaymentResult succeeded` status does not guarantee payment success; it may indicate success or pending bank confirmation.
+2. After the payment process completes, you must query the final order status from your server.
+3. For the production environment, ensure you use `Environment.production`.
+4. For color values in the payment configuration, use hexadecimal format strings.
