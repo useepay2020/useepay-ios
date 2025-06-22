@@ -12,7 +12,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "UseePayCore",
-            url: "https://github.com/useepay2020/useepay-ios/releases/download/0.0.2/UseePayCore.xcframework.zip",
-            checksum: "4b53255100d64b58d1707077bba2b7496a1e1830141290285147822c9faa2fe5")
+            url: "https://github.com/useepay2020/useepay-ios/releases/download/0.0.3/UseePayCore.xcframework.zip",
+            checksum: "744b8dcb18a27ecd8f25636f3faf1cfcee9dfed9819f6b4af6a748eb5a945dcd")
     ]
 )
