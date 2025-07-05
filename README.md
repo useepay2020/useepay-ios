@@ -42,7 +42,7 @@ Ensure you have registered and applied for the relevant App payment features in 
 
 1. Add to Podfile:
 ```ruby
-pod 'UseePay', '~> 0.0.2'
+pod 'UseePay', '~> 0.0.5'
 ```
 2. Execute installation:
 ```bash

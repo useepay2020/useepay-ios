@@ -42,7 +42,7 @@
 
 1. 在 Podfile 中添加：
 ```ruby
-pod 'UseePay', '~> 0.0.2'
+pod 'UseePay', '~> 0.0.5'
 ```
 2. 执行安装：
 ```bash
